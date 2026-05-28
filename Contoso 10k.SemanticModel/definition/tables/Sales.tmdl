@@ -38,6 +38,14 @@ table Sales
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
+	measure 'Double Margin' = ```
+			[Margin]*2 
+			```
+		formatString: #,0.###############\ "€";-#,0.###############\ "€";#,0.###############\ "€"
+		lineageTag: b047ce9e-dfc8-4b85-89f7-9e490deb00fc
+
+		annotation PBI_FormatHint = {"currencyCulture":"sk-SK"}
+
 	column 'Order Number'
 		dataType: int64
 		isHidden
