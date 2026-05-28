@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.0.0/schema.json",
   "name": "600e50304b3c610932cc",
   "position": {
-    "x": 8,
-    "y": 8,
+    "x": 7.5710245651651533,
+    "y": 7.5710245651651533,
     "z": 0,
-    "height": 608,
-    "width": 792
+    "height": 510.28705569213133,
+    "width": 452.74726899687619
   },
   "visual": {
     "visualType": "pivotTable",
@@ -57,6 +57,26 @@
               "expr": {
                 "Literal": {
                   "Value": "18D"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "background": [
+        {
+          "properties": {
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 4,
+                      "Percent": 0
+                    }
+                  }
                 }
               }
             }
