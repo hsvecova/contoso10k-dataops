@@ -19,7 +19,7 @@ table Sales
 
 		changedProperty = FormatString
 
-	measure 'Margin %' = DIVIDE ( [Margin], [Sales Amount] )
+	measure 'Margin %' = DIVIDE ( [Margin], [Sales Amount] )*0.98
 		formatString: 0.00%;-0.00%;0.00%
 		lineageTag: 78f2291d-1076-4202-b7bc-8d5dcd28f612
 
@@ -37,6 +37,12 @@ table Sales
 		lineageTag: cef4e750-c866-4b2a-90de-ad1f561d24ba
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Double Margin' = [Margin] * 2
+		formatString: #,0.###############\ "€";-#,0.###############\ "€";#,0.###############\ "€"
+		lineageTag: 19efd093-7b64-498c-9045-bd4e3252ffe2
+
+		annotation PBI_FormatHint = {"currencyCulture":"sk-SK"}
 
 	column 'Order Number'
 		dataType: int64
